@@ -1,0 +1,62 @@
+<style>
+/* Estilo general */
+body {
+    background: linear-gradient(to bottom, #87CEEB, #87CEEB 50%, #2F4F4F 50%, #2F4F4F);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hierba */
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grass::before,
+.grass::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at bottom, green 50%, transparent 51%);
+    background-size: 6px 100px;
+    animation: sway 3s infinite ease-in-out;
+}
+
+.grass::after {
+    background-image: radial-gradient(circle at bottom, darkgreen 50%, transparent 51%);
+    animation-duration: 2.5s;
+    animation-direction: alternate;
+}
+
+
+</style>

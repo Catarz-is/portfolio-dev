@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import grass from "../grass.astro"
+import PromptIcon from "../icons/Prompt.astro"
+import Projects from "../components/Projects.astro";
+import ProfileIcon from "../icons/Profile.astro";
+import AboutMe from "../components/AboutMe.astro";
+---
+
+<style>
+	/*Estilos scoped.*/
+	main {
+		opacity: 0.9;
+		background-color: #507a1d;
+		background-size: cover;
+		background-position: center;
+		/**
+	  https://i.pinimg.com/originals/cc/18/a5/cc18a5901d40c79d27a3c38584329956.gif
+	  https://i.pinimg.com/736x/d4/88/0c/d4880c84593be8c0184ecc8aa60aacc8.jpg*/
+	}
+
+	img {
+		opacity: 0.8;
+		border-radius: 40px;
+	}
+
+	.me {
+		text-align: center;
+		font-weight: 700;
+		justify-content: center; 
+	}
+
+
+</style>
+
+<Layout title="Portfolio Luz HM - Fullstack Developer">
+	
+	<main class="px-4">
+		<!-- Home -->
+		<SectionContainer id="inicio" class="py-16 md:py-36 flex-col items-center m-9">
+			<div class="flex flex-row items-center">
+				<img src="bee.webp" alt="icon" width="300" class="gap-x-3 mb-4" />
+				<div class="me flex flex-col items-center w-full">
+				  <h1 style="font-size: 50px; font-weight: bold; text-align: center; width: 100%;">Luz Hijar Melendez</h1>
+				  <h2 style="font-size: 35px; text-align: center; width: 100%;">FullStack Developer</h2>
+				</div>
+			  </div>
+		  
+			  <div class="mt-20 w-full">
+				<h1 class="me text-4xl text-center w-full" style="color: #fff0ca;">´´Mi forma de ver, una linea a la vez.`` |</h1>
+			  </div>
+		</SectionContainer>
+
+		<div class="space-y-24">
+		<!-- Proyectos -->
+		<SectionContainer id="proyectos">
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+			<PromptIcon class="size-7" />
+			Proyectos
+		  	</h2>
+		  <Projects/>
+		</SectionContainer>
+
+		<!-- Sobre mí -->
+		 <SectionContainer id="sobre-mi">
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+				<ProfileIcon class="size-8"/>
+				Sobre Mí
+			</h2>
+			<AboutMe/>
+		 </SectionContainer>
+
+		<!--Contacto -->
+		<!-- <SectionContainer id="contactame">
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black dark:text-white">
+				Contáctame
+			</h2>
+		</SectionContainer> -->
+		</div>
+	</main>
+</Layout>

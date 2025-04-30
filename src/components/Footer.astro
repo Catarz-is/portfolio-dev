@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+    class="w-full bg-white dark:bg-zinc-900 border-t border-zinc-300 dark:border-zinc-700"
+>
+    <div
+        class="max-w-4xl mx-auto px-4 py-6 md:flex md:items-center md:justify-between"
+    >
+        <!-- Texto de copyright -->
+        <span
+            class="text-base text-zinc-600 dark:text-zinc-400 block text-center md:text-left mb-4 md:mb-0"
+        >
+            © {currentYear} Luz Hijar M.™. Casi todos los derechos reservados.
+        </span>
+
+        <!-- Enlaces del footer -->
+        <ul
+            class="flex flex-wrap justify-center md:justify-end gap-4 text-base text-zinc-700 dark:text-zinc-200"
+        >
+            <li><a href="/#sobre-mi" class="hover:underline">Sobre mí</a></li>
+            <li>
+                <a href="mailto:lunedluz_hotmail.com" class="hover:underline"
+                    >Contacto</a>
+            </li>
+        </ul>
+    </div>
+</footer>
